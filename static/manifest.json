@@ -1,0 +1,15 @@
+{
+	"background_color": "#6997BB",
+	"theme_color": "#6997BB",
+	"name": "Subhav Gautam",
+	"short_name": "Zubhav",
+	"display": "standalone",
+	"start_url": "/",
+	"icons": [
+		{
+			"src": "images/logo-192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		}
+	]
+}

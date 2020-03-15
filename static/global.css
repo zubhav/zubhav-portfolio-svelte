@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'Montserrat';
+    font-display: auto;
+    src: url('./fonts/Montserrat-Light.woff') format('woff'),
+        url('./fonts/Montserrat-Light.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h1, h2 {
+    text-shadow: 0 4px 5px rgba(0,0,0,.35);
+}
+
+@media(max-height: 600px) {
+    html,
+    body {
+        overflow: auto;
+    }
+
+    footer {
+        position: static;
+    }
+}
