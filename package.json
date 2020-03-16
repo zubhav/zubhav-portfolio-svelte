@@ -6,7 +6,7 @@
     "dev": "sapper dev",
     "build": "npm run build:tailwind && sapper build --legacy",
     "export": "npm run build:tailwind && sapper export --legacy",
-    "now-build": "npm run export && mv ./__sapper__/export ./public",
+    "now-build": "npm run export && mv ./__sapper__/export ./export",
     "start": "node __sapper__/build",
     "watch:tailwind": "postcss static/tailwind.css -o static/index.css -w",
     "build:tailwind": "NODE_ENV=production postcss static/tailwind.css -o static/index.css"
