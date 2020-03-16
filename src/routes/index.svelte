@@ -26,6 +26,13 @@
 		margin-left: 2px;
 		margin-bottom: 3px;
 	}
+
+	@media(max-width: 700px) {
+		.cv {
+			width: 40%;
+		}
+	}
+
 </style>
 
 <script>

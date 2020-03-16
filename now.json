@@ -1,0 +1,7 @@
+{
+    "name": "Zubhav Portfolio Svelte",
+    "alias": ["zubhav.dev", "zubhav-portfolio-svelte"],
+    "build": {
+        "env": {}
+    }
+}
