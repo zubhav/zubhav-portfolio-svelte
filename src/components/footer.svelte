@@ -3,12 +3,12 @@
 </script>
 
 <footer class="bottom-0 left-0 h-12 fixed w-full">
-    <div class="border-t border-white border-solid py-2 mx-5">
-        <span class="float-left">
+    <section class="border-t border-white border-solid py-2 mx-5">
+        <p class="float-left">
             &copy; Copyright {year}
-        </span>
-        <span class="float-right">
+        </p>
+        <p class="float-right">
             Zubhav Ltd
-        </span>
-    </div>
+        </p>
+    </section>
 </footer>

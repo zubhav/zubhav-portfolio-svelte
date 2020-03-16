@@ -68,7 +68,7 @@
 	<title>Subhav Gautam</title>
 </svelte:head>
 
-<div class="text-center flex h-screen">
+<section class="text-center flex h-screen">
 	<a
 		href="mailto:subhavg@icloud.com?subject=Request for CV&body=Hi Subhav, I'm ____.%0D%0DCould you please send me a copy of your CV?"
 		title="Request my CV"
@@ -76,13 +76,15 @@
 		<img class="cv absolute top-0 left-0 w-1/4" alt="Request my CV" src="./images/cv.png"/>
 	</a>
 
-	<div class="m-auto">
-		<div class="pb-2">
+	<section class="m-auto">
+		<aside class="pb-2">
 			<img class="avatar mx-auto rounded-full" alt="Subhav Gautam avatar" src="./images/avatar.png" width="292"/>
-		</div>
+		</aside>
 
-		<h1 class="text-4xl font-bold leading-relaxed">Subhav Gautam</h1>
-		<h2 class="text-lg font-bold pt-2">Software Engineer specialising in web technologies</h2>
+		<header class="font-bold">
+			<h1 class="text-4xl leading-relaxed">Subhav Gautam</h1>
+			<h2 class="text-lg pt-2">Software Engineer specialising in web technologies</h2>
+		<header>
 
 		<ul class="flex items-center justify-center mt-6">
 			{#each items as item (item.id)}
@@ -98,5 +100,5 @@
 				</li>
 			{/each}
 		</ul>
-	</div>
-</div>
+	</section>
+</section>
