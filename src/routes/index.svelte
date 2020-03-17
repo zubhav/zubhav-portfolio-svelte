@@ -36,6 +36,13 @@
 </style>
 
 <script>
+	// import { onMount } from 'svelte';
+
+	// onMount(async () => {
+	// 	const res = await fetch('/icons');
+	// 	photos = await res.json();
+	// });
+
 	const items = [
 		{
 			id: 'twitter',
