@@ -36,12 +36,14 @@
 </style>
 
 <script>
-	// import { onMount } from 'svelte';
-
-	// onMount(async () => {
-	// 	const res = await fetch('/icons');
-	// 	photos = await res.json();
-	// });
+	import { onMount } from 'svelte';
+	
+	let photos = []
+	
+	onMount(async () => {
+		const res = await fetch('/api/icons');
+		photos = await res.json();
+	});
 
 	const items = [
 		{

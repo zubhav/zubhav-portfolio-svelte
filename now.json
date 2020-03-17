@@ -1,6 +1,9 @@
 {
     "alias": ["zubhav.dev", "zubhav-portfolio-svelte"],
     "build": {
-        "env": {}
+        "env": {
+            "CONTENTFUL_SPACE_ID": "@contentful_space_id",
+            "CONTENTFUL_ACCESS_TOKEN": "@contentful_access_token"
+          }
     }
 }
