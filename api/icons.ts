@@ -2,8 +2,6 @@ import { NowRequest, NowResponse } from '@now/node'
 const contentful = require('contentful')
 
 export default (request: NowRequest, response: NowResponse) => {
-  const CONTENT_TYPES = { icon: 'hf1md022iqu8' }
-
   const client = contentful.createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
@@ -11,9 +9,21 @@ export default (request: NowRequest, response: NowResponse) => {
   
   let items = []
 
-  client.getEntries({ content_type: CONTENT_TYPES.icon, order: 'fields.order' })
+  client.getEntries({ content_type: 'landingIcon', order: 'fields.order' })
     .then((response) => {
-      items = response.items
+      items = response.items.map(icon => {
+        const { sys, fields } = icon
+        const { title, file, link: href } = fields
+        const id = sys.id
+        const iconHref = file.fields.file.url
+
+        return {
+          id,
+          title,
+          href,
+          iconHref
+        }
+      })
     })
     .catch(console.error)
   

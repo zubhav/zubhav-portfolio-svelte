@@ -32,45 +32,17 @@
 			width: 40%;
 		}
 	}
-
 </style>
 
 <script>
 	import { onMount } from 'svelte';
 	
-	let photos = []
+	let items = []
 	
 	onMount(async () => {
 		const res = await fetch('/api/icons');
-		photos = await res.json();
+		items = await res.json();
 	});
-
-	const items = [
-		{
-			id: 'twitter',
-			title: 'Twitter',
-			href: 'https://twitter.com/SubDeveloper',
-			icon: 'twitter.png',
-		},
-		{
-			id: 'linkedin',
-			title: 'LinkedIn',
-			href: 'https://www.linkedin.com/in/subhav-g',
-			icon: 'linkedin.png',
-		},
-		{
-			id: 'github',
-			title: 'GitHub',
-			href: 'https://github.com/zubhav',
-			icon: 'github.png',
-		},
-		{
-			id: 'stackoverflow',
-			title: 'StackOverflow',
-			href: 'https://stackoverflow.com/users/6494623/zubhav',
-			icon: 'stackoverflow.png',
-		}
-	]
 </script>
 
 <svelte:head>
@@ -99,12 +71,12 @@
 			{#each items as item (item.id)}
 				<li class="mr-6">
 					<a 
-						class={`landing-icon bg-white rounded-full flex justify-center items-center h-16 w-16 ${item.id}`} 
+						class={`landing-icon bg-white rounded-full flex justify-center items-center h-16 w-16 ${item.title.toLowerCase()}`} 
 						href={item.href}
 						target="_blank"
                 		rel="noopener noreferrer"
 					>
-						<img alt={item.title} src={`./images/${item.icon}`}/>
+						<img alt={item.title} src={item.iconHref}/>
 					</a>
 				</li>
 			{/each}
