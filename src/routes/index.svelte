@@ -65,7 +65,7 @@
 		<header class="font-bold">
 			<h1 class="text-4xl leading-relaxed">Subhav Gautam</h1>
 			<h2 class="text-lg pt-2">Software Engineer specialising in web technologies</h2>
-		<header>
+		</header>
 
 		<ul class="flex items-center justify-center mt-6">
 			{#each items as item (item.id)}

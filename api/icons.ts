@@ -10,7 +10,7 @@ export default (request: NowRequest, response: NowResponse) => {
   let items = []
 
   client.getEntries({ content_type: 'landingIcon', order: 'fields.order' })
-    .then((response) => {
+    .then(response => {
       items = response.items.map(icon => {
         const { sys, fields } = icon
         const { title, file, link: href } = fields
@@ -24,8 +24,8 @@ export default (request: NowRequest, response: NowResponse) => {
           iconHref
         }
       })
+
+      response.status(200).json(items)
     })
     .catch(console.error)
-  
-  response.status(200).json(items)
 }
