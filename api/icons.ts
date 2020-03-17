@@ -10,8 +10,8 @@ export default (request: NowRequest, response: NowResponse) => {
   let items = []
 
   client.getEntries({ content_type: 'landingIcon', order: 'fields.order' })
-    .then(response => {
-      items = response.items.map(icon => {
+    .then(entries => {
+      items = entries.items.map(icon => {
         const { sys, fields } = icon
         const { title, file, link: href } = fields
         const id = sys.id
