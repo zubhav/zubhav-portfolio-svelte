@@ -2,7 +2,7 @@ import { NowRequest, NowResponse } from '@now/node'
 const contentful = require('contentful')
 
 export default (request: NowRequest, response: NowResponse) => {
-  const CONTENT_TYPES = { icon: 'JN8mObdXNn91HFbn' }
+  const CONTENT_TYPES = { icon: 'hf1md022iqu8' }
 
   const client = contentful.createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
@@ -10,7 +10,7 @@ export default (request: NowRequest, response: NowResponse) => {
   });
   
   let items = []
-  
+
   client.getEntries({ content_type: CONTENT_TYPES.icon, order: 'fields.order' })
     .then((response) => {
       items = response.items
