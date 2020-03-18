@@ -67,7 +67,7 @@
 			<h2 class="text-lg pt-2">Software Engineer specialising in web technologies</h2>
 		</header>
 
-		<ul class="flex items-center justify-center mt-6">
+		<ul class="flex items-center justify-center h-16 mt-6">
 			{#each items as item (item.id)}
 				<li class="mr-6">
 					<a 
