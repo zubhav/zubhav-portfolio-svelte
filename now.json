@@ -1,7 +1,24 @@
 {
-    "alias": ["zubhav.dev", "zubhav-portfolio-svelte"],
+  "alias": ["zubhav.dev", "zubhav-portfolio-svelte"],
+  "env": {
+    "CONTENTFUL_SPACE_ID": "@contentful_space_id",
+    "CONTENTFUL_ACCESS_TOKEN": "@contentful_access_token"
+  },
+  "build": {
     "env": {
-        "CONTENTFUL_SPACE_ID": "@contentful_space_id",
-        "CONTENTFUL_ACCESS_TOKEN": "@contentful_access_token"
+      "TRACKING_ID": "@ga_tracking_id",
+      "NODE_ENV": "production"
     }
+  },
+  "routes": [
+    {
+      "src": "/api(.*)",
+      "headers": {
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Methods": "*",
+        "Access-Control-Allow-Origin": "*"
+      },
+      "methods": ["GET"]
+    }
+  ]
 }
