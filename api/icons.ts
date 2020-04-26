@@ -8,7 +8,7 @@ export default async (request: NowRequest, response: NowResponse) => {
   });
 
   try {
-    const entries = client.getEntries({
+    const entries = await client.getEntries({
       content_type: "landingIcon",
       order: "fields.order",
     });
