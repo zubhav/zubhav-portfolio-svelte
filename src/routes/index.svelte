@@ -52,7 +52,7 @@
 
 <section class="text-center flex h-screen">
   <a
-    href="mailto:subhavg@icloud.com?subject=Request for CV&body=Hi Subhav, I'm
+    href="mailto:me@zubhav.dev?subject=Request for CV&body=Hi Subhav, I'm
     ____.%0D%0DCould you please send me a copy of your CV?"
     title="Request my CV">
     <img
