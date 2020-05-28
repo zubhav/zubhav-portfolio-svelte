@@ -6,7 +6,7 @@
   },
   "build": {
     "env": {
-      "TRACKING_ID": "@ga_tracking_id",
+      "GA_TRACKING_ID": "@ga_tracking_id",
       "NODE_ENV": "production"
     }
   },

@@ -24,8 +24,8 @@ export default {
       replace({
         "process.browser": true,
         "process.env.NODE_ENV": JSON.stringify(mode),
-        "process.env.TRACKING_ID": JSON.stringify(
-          process.env.TRACKING_ID || ""
+        "process.env.GA_TRACKING_ID": JSON.stringify(
+          process.env.GA_TRACKING_ID || ""
         ),
       }),
 
@@ -82,8 +82,8 @@ export default {
       replace({
         "process.browser": false,
         "process.env.NODE_ENV": JSON.stringify(mode),
-        "process.env.TRACKING_ID": JSON.stringify(
-          process.env.TRACKING_ID || ""
+        "process.env.GA_TRACKING_ID": JSON.stringify(
+          process.env.GA_TRACKING_ID || ""
         ),
       }),
 
@@ -114,8 +114,8 @@ export default {
       replace({
         "process.browser": true,
         "process.env.NODE_ENV": JSON.stringify(mode),
-        "process.env.TRACKING_ID": JSON.stringify(
-          process.env.TRACKING_ID || ""
+        "process.env.GA_TRACKING_ID": JSON.stringify(
+          process.env.GA_TRACKING_ID || ""
         ),
       }),
       commonjs(),

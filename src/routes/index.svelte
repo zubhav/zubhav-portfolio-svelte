@@ -1,13 +1,15 @@
-<script>
-  import { onMount } from "svelte";
+<script context="module">
   import { fetchFromApi } from "../utils/fetchFromApi.utils";
 
-  let items = [];
-
-  onMount(async () => {
+  export async function preload(page, session) {
     const res = await fetchFromApi("/api/icons");
-    items = await res.json();
-  });
+    const items = await res.json();
+    return { items };
+  }
+</script>
+
+<script>
+  export let items;
 </script>
 
 <style>
@@ -61,6 +63,7 @@
       src="./images/cv.png" />
   </a>
 
+  <!-- <section class="flex flex-col mb-4 mx-auto justify-center xs:mt-16"> -->
   <section class="m-auto xs:mt-16">
     <aside class="pb-2">
       <img
