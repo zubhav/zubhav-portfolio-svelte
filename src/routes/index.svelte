@@ -10,6 +10,14 @@
 
 <script>
   export let items;
+
+  import { fade } from "svelte/transition";
+
+  let visible = false;
+
+  setTimeout(() => {
+    visible = true;
+  }, 200);
 </script>
 
 <style>
@@ -53,44 +61,51 @@
 </svelte:head>
 
 <section class="text-center flex h-screen">
-  <a
-    href="mailto:me@zubhav.dev?subject=Request for CV&body=Hi Subhav, I'm
-    ____.%0D%0DCould you please send me a copy of your CV?"
-    title="Request my CV">
-    <img
-      class="cv absolute top-0 left-0 w-1/4"
-      alt="Request my CV"
-      src="./images/cv.png" />
-  </a>
-
-  <section class="flex flex-col mx-auto justify-center xs:mb-16">
-    <aside class="pb-2">
+  {#if visible}
+    <a
+      transition:fade
+      href="mailto:me@zubhav.dev?subject=Request for CV&body=Hi Subhav, I'm
+      ____.%0D%0DCould you please send me a copy of your CV?"
+      title="Request my CV">
       <img
-        class="avatar mx-auto rounded-full"
-        alt="Subhav Gautam avatar"
-        src="./images/avatar.png"
-        width="292" />
-    </aside>
+        class="cv absolute top-0 left-0 w-1/4"
+        alt="Request my CV"
+        src="./images/cv.png" />
+    </a>
+  {/if}
 
-    <header class="font-bold">
-      <h1 class="text-4xl leading-relaxed">Subhav Gautam</h1>
-      <h2 class="text-lg pt-2">
-        Software Engineer specialising in web technologies
-      </h2>
-    </header>
+  {#if visible}
+    <section
+      class="flex flex-col mx-auto justify-center xs:mb-16"
+      transition:fade>
+      <aside class="pb-2">
+        <img
+          class="avatar mx-auto rounded-full"
+          alt="Subhav Gautam avatar"
+          src="./images/avatar.png"
+          width="292" />
+      </aside>
 
-    <ul class="flex items-center justify-center h-16 mt-6">
-      {#each items as item (item.id)}
-        <li class="mr-6">
-          <a
-            class={`landing-icon bg-white rounded-full flex justify-center items-center h-16 w-16 ${item.title.toLowerCase()}`}
-            href={item.href}
-            target="_blank"
-            rel="noopener noreferrer">
-            <img alt={item.title} src={item.iconHref} />
-          </a>
-        </li>
-      {/each}
-    </ul>
-  </section>
+      <header class="font-bold">
+        <h1 class="text-4xl leading-relaxed">Subhav Gautam</h1>
+        <h2 class="text-lg pt-2">
+          Software Engineer specialising in web technologies
+        </h2>
+      </header>
+
+      <ul class="flex items-center justify-center h-16 mt-6">
+        {#each items as item (item.id)}
+          <li class="mr-6">
+            <a
+              class={`landing-icon bg-white rounded-full flex justify-center items-center h-16 w-16 ${item.title.toLowerCase()}`}
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer">
+              <img alt={item.title} src={item.iconHref} />
+            </a>
+          </li>
+        {/each}
+      </ul>
+    </section>
+  {/if}
 </section>
