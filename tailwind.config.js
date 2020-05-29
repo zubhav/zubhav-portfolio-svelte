@@ -1,4 +1,5 @@
 module.exports = {
+  purge: ["./src/**/*.svelte", "./src/**/*.html"],
   theme: {
     screens: {
       xs: { min: "0px", max: "639px" },
@@ -15,7 +16,6 @@ module.exports = {
         blue: "#6997bb",
         white: "#ffffff",
       },
-      spacing: {},
     },
   },
   variants: {},

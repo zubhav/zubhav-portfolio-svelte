@@ -63,8 +63,7 @@
       src="./images/cv.png" />
   </a>
 
-  <!-- <section class="flex flex-col mb-4 mx-auto justify-center xs:mt-16"> -->
-  <section class="m-auto xs:mt-16">
+  <section class="flex flex-col mx-auto justify-center xs:mb-16">
     <aside class="pb-2">
       <img
         class="avatar mx-auto rounded-full"

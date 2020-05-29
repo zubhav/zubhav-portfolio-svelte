@@ -1,5 +1,5 @@
 const CONFIG = {
-  DEV_API_URL: "http://localhost.sub:3000",
+  DEV_API_URL: "https://zubhav.dev",
   PROD_API_URL: "https://zubhav.dev",
 };
 
