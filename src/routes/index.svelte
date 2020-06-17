@@ -51,8 +51,9 @@
           class="avatar mx-auto rounded-full"
           alt="Black Lives Matter"
           src="./images/blm.png"
-          style="width: 300px; height: auto;"
-        />
+          style="min-width: 250px; max-width: 450px;"
+          width="40%"
+          height="400" />
       </aside>
 
       <header class="font-bold">
